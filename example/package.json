@@ -1,0 +1,11 @@
+{
+	"name": "ButtonsWorkExample",
+	"version": "0.0.1",
+	"description": "Bind actions to buttons",
+	"scripts": {
+		"start": "coffee app.coffee"
+	},
+	"dependencies": {
+		"slack-node": "^0.1.7"
+	}
+}
