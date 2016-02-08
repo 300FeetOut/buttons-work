@@ -43,6 +43,7 @@ comboAction = () ->
 
 buttonConfig =
 	red:
+		pins: {light: 17, button: 6}
 		do: leavingWork
 		blue:
 			do: comboAction
@@ -50,26 +51,34 @@ buttonConfig =
 		pins: {light: 19, button: 5}
 		do: arrivingAtWork
 	blue:
+		pins: {light: 13, button: 8}
 		do: funnyGif
 	yellow:
+		pins: {light: 26, button: 9}
 		do: lunchTime
 		delay: 1000
 		red:
+			pins: {light: 17, button: 6}
 			do: () ->
 				lunchTime('Brown Chicken Brown Cow')
 		green:
+			pins: {light: 19, button: 5}
 			do: () ->
 				lunchTime('Super Duper Burger')
-		blue: 
+		blue:
+			pins: {light: 13, button: 8}
 			do: () ->
 				lunchTime('Edwardo\'s')
 		yellow:
+			pins: {light: 26, button: 9}
 			do: () ->
 				lunchTime('Adelita\'s')
 		white:
+			pins: {light: 22, button: 7}
 			do: () ->
 				lunchTime('Whole Foods')
 	white:
+		pins: {light: 22, button: 7}
 		do: coffeeTime
 
 buttonsWork = require('./../src/buttons-work').init(buttonConfig, true)
