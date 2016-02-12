@@ -19,7 +19,7 @@ buttonConfig = {
 }
 
 // Init using your config object.
-buttonsWork.init(buttonConfig, *debug: false*);
+buttonsWork.init(buttonConfig, true); // Second argument turns debug on/off
 ```
 Nested button presses
 ---------------------
