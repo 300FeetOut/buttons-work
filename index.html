@@ -2,13 +2,16 @@
 <html lang="en-us">
   <head>
     <meta charset="UTF-8">
-    <title>Buttons Work. But Internet Simplicity</title>
+    <title>Buttons Work. By Internet Simplicity</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.1.1/gh-fork-ribbon.min.css" />
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/highlight.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/languages/css.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
     <!--[if lt IE 9]>
       <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.1.1/gh-fork-ribbon.ie.min.css" />
     <![endif]-->
@@ -21,7 +24,7 @@
 
     <section class="page-header">
       <h1 class="project-name">Buttons Work</h1>
-    <h2 class="project-tagline">Press Buttons. Do Work. On Slack.</h2>      
+    <h2 class="project-tagline">Make Real Buttons Do Real Work For You on Slack.</h2>      
       <a href="https://github.com/internet-simplicity/buttons-work" class="btn">View on GitHub</a>
       <a href="https://github.com/internet-simplicity/buttons-work/zipball/master" class="btn">Download .zip</a>
       <a href="https://github.com/internet-simplicity/buttons-work/tarball/master" class="btn">Download .tar.gz</a>
@@ -30,18 +33,20 @@
     <section class="main-content">
     <img src="assets/lunch_button.gif" class="shadow header-image" ><br />
 
-    <p class="lead">Life, for the modern knowlege worker, has devolved to a monotony of QWERTY keys and mouse clicks. It's time to step outside the box. It's time to shift paradigms. It's time...for buttons. That work!</p>
+    <h2>Easy, Real Buttons for Slack</h2>
+    <p>Yes, this has always been possible. No, it has never been this easy.</p>
+    <p>All it takes is 20 minutes + ~$45 in parts (and you wanted to buy a Raspberry Pi anyways). Everything about this
+    project is open source. Contributions are welcome!</p>
     
-    <h2>Think Outside The Box</h2>
-    <p>Odds are that you are wasting tremendous amounts of time pressing <em>multiple buttons</em> when you could be pressing only one.</p>
-
+    <h2>Why?</h2>
+    <p>Odds are that you are wasting tremendous amounts of time pressing <em>multiple buttons</em> when you could be pressing only one. In order to appreciate this project, you must <strong>think outside the box</strong>.</p>
     <img src="assets/outside_the_box.png"><br />
 
-    <h2>Buttons + Bots = Awesome</h2>
-    <p>With this little button lib, <a href="http://howdy.ai/">howdy.ai</a> and <a href="http://howdy.ai/botkit/">botkit</a> you can use your buttons to control armies of AI minions! THEY CAN DO <strong>ALL</strong> YOUR WORK FOR YOU. </p>
+    <h2>It's About The Bots</h2>
+    <p>This lib was largely inspired by <a href="http://howdy.ai/">howdy.ai</a> and <a href="http://howdy.ai/botkit/">botkit</a> – tools that allow to deploy Slack Bots who hold parallel Slack conversations and automate common tasks. By adding a button, we are essentially elevating your status. Deploying an army of AI minions with the press of a button is WAY cooler than requiring you to type a whole command.</p>
 
-    <p>For example:</p>
-
+    <h2>Examples of Real Work from Real Buttons</h2>
+    
     <p>Make sure people are productive</p>
     <img src="http://placehold.it/600x200"><br />
     (Work Harder)
@@ -62,28 +67,94 @@
     <img src="http://placehold.it/600x200"><br />
     (Video of "Socialize" button)
 
-    <p>Your new bots do so much work for you, don't you think they have earned their own button?</p>
+    <p>More...</p>
+   <ul>
+       <li>Pizza Button (Push For Pizza API?)</li>
+       <li>Motivate</li>
+       <li>Evacuate (with protective switch)</li>
+       <li>Launch</li>
+       <li>Weather</li>
+       <li>Work Harder</li>
+       <li>Consume Food (Triggers Bot)</li>
+       <li>Joren is late</li>
+   </ul>
 
-    Pizza Button (Push For Pizza API?)
-    Motivate
-    Evacuate (with protective switch)
-    Launch
-    Weather
-    Work Harder
-    Consume Food (Triggers Bot)
-    Joren is late
 
-    <h3>What will be left for you do?</h3>
-    <p>Honestly, we have no idea.</p>
+    <h2>Let's Build Some Buttons</h2>
+    <p>Depending on which hardware you choose, you're total investment should be around ~$45 USD. Time spent may be 30 min, counting install time.</p>
+
+    <h3>Order Parts</h3>
+    <ul>
+        <li><a href="http://www.amazon.com/gp/product/B00NWFZCQC">Buttons</a></li>
+        <li><a href="http://www.amazon.com/microtivity-IB401-400-point-Experiment-Breadboard/dp/B004RXKWDQ">Breadboard</a></li>
+        <li><a href="https://www.adafruit.com/products/2817">Raspberry Pi Zero Kit</a></li>
+        <li><a href="https://www.adafruit.com/products/2817">Pi Cobbler</a></li>
+    </ul>
+
+    <img src="assets/buttons_work_parts.png">
+
+    <h3>Plug It In and Turn It On (3 min)</h3>
+    <p>This is pretty self explintory. Need photos plugging in ribbon / cobbler.</p>
+
+    <h3>Install Software (8 min)</h3>
+    <p>List out the steps here...note on the ssh "just working" becuase of the exclusive host name (Rex, can you elaborate?)</p>    
+    <video controls autobuffer="true">
+      <source src="https://s3-us-west-2.amazonaws.com/isimple-cdn/buttons-work/buttons_work_install.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+
+    <h3>Wire Your First Button (3 min)</h3>
+    <video controls autobuffer="true">
+      <source src="https://s3-us-west-2.amazonaws.com/isimple-cdn/buttons-work/buttons-work-hardware.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+
+    <h3>Make It Work (1 minute)</h3>
+    <img src="http://placehold.it/600x200">
+    Video showing the setting up of a new button.
+    <pre>
+        <code class="javascript">
+// Include the package.
+buttonsWork = require('buttons-work');
+
+// Create a config object.
+buttonConfig = {
+    buttonName: {
+        pins: {light: LED_Pin_Number_Here, button: Button_Pin_Number_Here},
+        do: Your_Function_Here,
+        delay: 1000 // (Optional. Time in MS delay after button is pressed before executing function.)
+    }
+}
+
+// Init using your config object.
+buttonsWork.init(buttonConfig, true); // Second argument turns debug on/off
+        </code>
+    </pre>
+
+    <pre>
+      <code class="javascript">
+buttonConfig = {
+buttonName: {
+    pins: {light: LED_Pin_Number_Here, button: Button_Pin_Number_Here},
+    do: Your_Function_Here,
+    delay: 1000,
+    buttonName2: {
+        pins: {light: LED_Pin_Number_Here, button: Button_Pin_Number_Here},
+        do: Your_Function_Here
+    }
+}
+}
+      </code>
+    </pre>
+
+    
+
+    
+
+
+    <h3>Welcome to your new job</h3>
+    <p>Buttons are so much more fun than keyboards</p>
     <img src="assets/homer_buttons.gif">
-
-    <h2>Make sure you are the one pressing the buttons</h2>
-    <p>If your AI threatens to spiral out of control, a button can demonstrate who has the power. 
-    Your button keeps your AI under your thumb.</p>
-
-    <h2>Want This?</h2>
-    <p>A sizeable investment is required for this level of productivity. A complete list of parts needed is below:
-    </p>
 
 
     <footer class="site-footer">
@@ -91,11 +162,6 @@
 
       <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
     </footer>
-
-    <h3>Do you have the budget?</h3>
-    <p>Raspberry Pi Zero $5</p>
-    <p>Spare Buttons</p>
-
 
     </section>
 
