@@ -4,7 +4,7 @@
 	"description": "Bind actions to buttons",
 	"main": "lib/buttons-work.js",
 	"scripts": {
-		"build": "coffee -c -o built src/buttons-work.coffee"
+		"build": "coffee -c -o lib src/buttons-work.coffee"
 	},
 	"dependencies": {
 		"onoff": "^1.0.4"
