@@ -9,7 +9,7 @@
 	"dependencies": {
 		"onoff": "^1.0.4"
 	},
-	"dev-dependencies": {
+	"devDependencies": {
 		"coffee-script": "^1.10.0"
 	}
 }
