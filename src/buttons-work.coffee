@@ -58,19 +58,24 @@ buttonPressed = (name) ->
 	, currentAction.delay or 0
 
 initializePins = () ->
+	console.log 'Opening pins'
 	for name, buttonConfig of actions
 		if buttonConfig.pins
 			if buttonConfig.pins.light
 				lights[name] = new Gpio(buttonConfig.pins.light, 'out')
 				setButton(name, 1)
+				if debug
+					console.log 'opening light pin ' + buttonConfig.pins.light
 			
 			buttons[name] = new Gpio(buttonConfig.pins.button, 'in', 'both')
+			if debug
+				console.log 'opening button pin ' + buttonConfig.pins.button
 			buttons[name].watch ((name, err, value) ->
 				if value and !buttonTimeout
 					pulseButton(name)
 					buttonPressed(name)
 			).bind(this, name)
-	console.log 'Pins Initialized'
+	console.log 'Pins initialized'
 
 module.exports = 
 	init: (buttonConfig, enableDebug) ->
