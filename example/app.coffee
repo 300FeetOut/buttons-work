@@ -41,8 +41,28 @@ coffeeTime = () ->
 comboAction = () ->
 	console.log 'comboAction'
 
+whiteButton = () ->
+	console.log 'whiteBurron'
+	slack.api 'chat.postMessage',
+		username: 'Button'
+		text: "White Button was pressed!"
+		channel:'#skunkworks'
+	, (err, response) ->
+		console.log err, response
+
+blueButton = () ->
+	console.log 'blueBurron'
+	slack.api 'chat.postMessage',
+		username: 'Button'
+		text: "Blue Button was pressed!"
+		channel:'#skunkworks'
+	, (err, response) ->
+		console.log err, response
+
+
 buttonConfig =
 	red:
+		pins: {light: 17, button: 6}
 		do: leavingWork
 		blue:
 			do: comboAction
@@ -50,8 +70,10 @@ buttonConfig =
 		pins: {light: 19, button: 5}
 		do: arrivingAtWork
 	blue:
-		do: funnyGif
+		pins: {light: 13, button: 8}
+		do: blueButton
 	yellow:
+		pins: {light: 26, button: 9}
 		do: lunchTime
 		delay: 1000
 		red:
@@ -70,8 +92,9 @@ buttonConfig =
 			do: () ->
 				lunchTime('Whole Foods')
 	white:
-		do: coffeeTime
+		pins: {light: 22, button: 7}
+		do: whiteButton
 
 buttonsWork = require('./../src/buttons-work').init(buttonConfig, true)
 
-buttonsWork.simulateButtonPress('green')
+# buttonsWork.simulateButtonPress('green')

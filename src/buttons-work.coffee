@@ -12,6 +12,25 @@ setButton = (name, value) ->
 	if lights[name]
 		lights[name].write(value)
 
+pulseButton = (name) ->
+	setButton(name, 0)
+	setTimeout () ->
+		setButton(name, 1)
+		setTimeout () ->
+			setButton(name, 0)
+			setTimeout () ->
+				setButton(name, 1)
+				setTimeout () ->
+					setButton(name, 0)
+					setTimeout () ->
+						setButton(name, 1)
+						debounce[name] = false
+					, 75
+				, 75
+			, 75
+		, 75
+	, 350
+
 buttonPressed = (name) ->
 	if debug
 		console.log name + ' button pressed'
@@ -43,16 +62,15 @@ initializePins = () ->
 		if buttonConfig.pins
 			if buttonConfig.pins.light
 				lights[name] = new Gpio(buttonConfig.pins.light, 'out')
+				setButton(name, 1)
 			
 			buttons[name] = new Gpio(buttonConfig.pins.button, 'in', 'both')
 			buttons[name].watch ((name, err, value) ->
 				if value and !buttonTimeout
-					setButton(name, 1)
+					pulseButton(name)
 					buttonPressed(name)
-				else if !value
-					debounce[name] = false
-					setButton(name, 0)
 			).bind(this, name)
+	console.log 'Pins Initialized'
 
 module.exports = 
 	init: (buttonConfig, enableDebug) ->
@@ -64,15 +82,15 @@ module.exports =
 	simulateButtonPress: (buttonName) ->
 		buttonPressed(buttonName)
 
-# Close pins on shutdown
-
 process.stdin.resume()
 
+# Close pins on shutdown
 exitHandler = (options, err) ->
 	console.log 'closing pins'
-	for light in lights
+	for name, light of lights
+		setButton(name, 0)
 		light.unexport()
-	for button in buttons
+	for button of buttons
 		button.unexport()
 	process.exit()
 
