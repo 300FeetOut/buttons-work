@@ -1,8 +1,20 @@
+<!--
+
+This fun side-project was created by the guys at Internet Simplicity:
+@rexington, @jorenm and @rsweetland.
+Original page theme by <a href="https://twitter.com/jasonlong">Jason Long</a>
+hosted on Githb Pages. Icons by: Silverware by Krish from the Noun Project,
+Coffee by Christian Lisogorsky from the Noun Project,
+Relaxing by Creative Stall from the Noun Project,
+Conversation by Rudy Jaspers from the Noun Project,
+Accept Chat by riyazali from the Noun Project
+
+-->
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
     <meta charset="UTF-8">
-    <title>Buttons Work. By Internet Simplicity</title>
+    <title>Make Real Buttons Do Things on Slack. | By Internet Simplicity</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
@@ -26,7 +38,7 @@
       data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
 
     <div id="block2" class="page-header" style="width: 100%; height: 800px;"
-      data-vide-bg="mp4: assets/header-vid-slack, poster: assets/header-vid-slack"
+      data-vide-bg="mp4: https://s3-us-west-2.amazonaws.com/isimple-cdn/buttons-work/header-vid-slack.mp4, poster: assets/header_vid_slack"
       data-vide-options="position: 0% 50%">
       <div class="vid-overlay-left">
         <h1 class="project-name">Buttons Work</h1>
@@ -37,8 +49,17 @@
     </div>
 
     <section class="main-content">
-      <!-- <img src="assets/lunch_button.gif" class="shadow header-image"><br/> -->
 
+    <div class="share-bar">
+      <ul class="share-buttons">
+        <li><a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fbuttons.work&t=" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><img src="assets/flat_web_icon_set/color/Facebook.png"></a></li>
+        <li><a href="https://twitter.com/intent/tweet?source=http%3A%2F%2Fbuttons.work&text=:%20http%3A%2F%2Fbuttons.work&via=isimpleinc" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;"><img src="assets/flat_web_icon_set/color/Twitter.png"></a></li>
+        <li><a href="https://plus.google.com/share?url=http%3A%2F%2Fbuttons.work" target="_blank" title="Share on Google+" onclick="window.open('https://plus.google.com/share?url=' + encodeURIComponent(document.URL)); return false;"><img src="assets/flat_web_icon_set/color/Google+.png"></a></li>
+        <li><a href="http://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Fbuttons.work&title=&summary=&source=http%3A%2F%2Fbuttons.work" target="_blank" title="Share on LinkedIn" onclick="window.open('http://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(document.URL) + '&title=' +  encodeURIComponent(document.title)); return false;"><img src="assets/flat_web_icon_set/color/LinkedIn.png"></a></li>
+      </ul>
+    </div>
+
+      <!-- <img src="assets/lunch_button.gif" class="shadow header-image"><br/> -->
       <h1>Get Stuff Done. With Real Buttons!</h1>
 
       <p>This project was inspired by the
@@ -72,43 +93,45 @@
       <p>Here is how we have our buttons set up at the
         <a href="https://www.internetsimplicity.net">Internet Simplicity</a> office.</p>
 
-      <img class='icon-button' src="assets/icon_back_to_work.png">
-      <p>
-        <strong>Make sure people are productive</strong><br />
-        Office chit-chat? One button-press, and everone's Slack simulaneously blows up
-        with a randomized "get back to work" message. Press it multiple times,
-        with vigor, and a frustrated look on your face for added effect.
-      </p>
+      <div class="isimple-use-cases">
 
-      <img class='icon-button' src="assets/icon_coffee.png">
-      <p>
-        <strong>Company Coffee Break</strong><br />As the coffee runner is walking
-        out the door, they hit the 'coffee button'. A howdy.ai bot with a
-        custom script is deployed, asking each person if they want coffee, and
-        if so, what they would like. By the time the coffee-goer gets to the
-        coffee shop, Slack will have posted everyone's orders.
-      </p>
-
-      <img class='icon-button' src="assets/icon_check_in.png">
-      <p>
-        <strong>Run Daily Checkin's</strong><br />Another button triggers your howdy.ai
-        bot to run your daily checkins with everyone, saving hours of individual
-        chats for the same questions.
-      </p>
-
-      <img class='icon-button' src="assets/icon_socialize.png"><br/>
-      <p><strong>Socialize</strong><br />Even let your co-workers know that you care about them... This would deploy
-        a howdy.ai script that is pretty special – it asks everyone in the office
-        how their weekend was, then posts everyone's socalizations back to
-        eachother. </p>
-
-        <img class='icon-button' src="assets/icon_lunch.png"><br/>
+        <img class='icon-button' src="assets/icon_back_to_work.png">
         <p>
-          <strong>Get Lunch Orders</strong><br />As Howdy.ai has shown on their site,
-          you can even collect lunch orders. What could make this even more magical? That's right, a real button. (Lunch ordering with Howdy.ai shown below)<br />
+          <strong>Make sure people are productive</strong><br />
+          Office chit-chat? One button-press, and everone's Slack simulaneously blows up
+          with a randomized "get back to work" message. Press it multiple times,
+          with vigor, and a frustrated look on your face for added effect.
         </p>
-        <img src="https://howdy.ai/assets/demos/checkin.gif" alt="Howdy.ai getting lunch" style="border: 1px solid grey"/>
 
+        <img class='icon-button' src="assets/icon_coffee.png">
+        <p>
+          <strong>Company Coffee Break</strong><br />As the coffee runner is walking
+          out the door, they hit the 'coffee button'. A howdy.ai bot with a
+          custom script is deployed, asking each person if they want coffee, and
+          if so, what they would like. By the time the coffee-goer gets to the
+          coffee shop, Slack will have posted everyone's orders.
+        </p>
+
+        <img class='icon-button' src="assets/icon_check_in.png">
+        <p>
+          <strong>Run Daily Checkin's</strong><br />Another button triggers your howdy.ai
+          bot to run your daily checkins with everyone, saving hours of individual
+          chats for the same questions.
+        </p>
+
+        <img class='icon-button' src="assets/icon_socialize.png"><br/>
+        <p><strong>Socialize</strong><br />Even let your co-workers know that you care about them... This would deploy
+          a howdy.ai script that is pretty special – it asks everyone in the office
+          how their weekend was, then posts everyone's socalizations back to
+          eachother. </p>
+
+          <img class='icon-button' src="assets/icon_lunch.png"><br/>
+          <p>
+            <strong>Get Lunch Orders</strong><br />As Howdy.ai has shown on their site,
+            you can even collect lunch orders. What could make this even more magical? That's right, a real button. (Lunch ordering with Howdy.ai shown below)<br />
+          </p>
+          <img src="https://howdy.ai/assets/demos/checkin.gif" alt="Howdy.ai getting lunch" style="border: 1px solid grey"/>
+      </div>
 
       <h2>Ready To Get Building?</h2>
       <p>We built our buttons with the Raspberry Pi, Model B. We recommend
@@ -180,31 +203,33 @@
 
     <img src="assets/homer_buttons.gif" width="600px">
 
+
+    <h3>Need Help Building Something?</h3>
+    <p>Buttons.work was created by <a href="https://www.internetsimplicity.net">Internet Simplicity</a>,
+      a San Jose, California based web development firm. We've been building out
+      innovative ideas and award winning websites since 2003. Need help building
+      something?</p>
     </section>
 
+
+
     <div id="block2" style="width: 100%; height: 500px;"
-      data-vide-bg="mp4: assets/vid-summary, poster: video/vid-summary"
+      data-vide-bg="mp4: https://s3-us-west-2.amazonaws.com/isimple-cdn/buttons-work/vid-summary.mp4, poster: assets/vid_summary"
       data-vide-options="position: 0% 50%">
       <div class="vid-overlay-center">
-        <div style="width: 50%; padding: 100px; float: right; text-align: center; border-left: 1px solid white;">
+        <div class="get-in-touch">
           <p>
-            We're accepting a limited number of new projects. Want to build something awesome together?<br />
-            <a href="https://www.internetsimplicity.net" class="circle-press">Get In Touch</a>
+            We are currently accepting new projects. Want to build something awesome together?
+          </p>
+          <p>
+            <a href="https://www.internetsimplicity.net" class="btn">Get In Touch</a>
           </p>
         </div>
-          <img src="http://www.internetsimplicity.net/images/logo.svg" alt="Internet Simplicity Logo" style="width: 400px; margin: 170px 0;" />
+          <div class="logo">
+            <img src="http://www.internetsimplicity.net/images/logo.svg" alt="Internet Simplicity Logo" />
+          </div>
       </div>
     </div>
-
-    <footer class="site-footer">
-      <span class="site-footer-credits">This page was based on the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a>
-        by <a href="https://twitter.com/jasonlong">Jason Long</a> from Githb Pages Icons: Silverware by Krish from the Noun Project,
-        Coffee by Christian Lisogorsky from the Noun Project,
-        Relaxing by Creative Stall from the Noun Project,
-        Conversation by Rudy Jaspers from the Noun Project,
-        Accept Chat by riyazali from the Noun Project
-      </span>
-    </footer>
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="../libs/jquery/dist/jquery.min.js"><\/script>')</script>
@@ -221,6 +246,11 @@
         pageTracker._trackPageview();
       } catch (err) {}
     </script>
+
+
+  <!-- Go to www.addthis.com/dashboard to customize your tools -->
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-532b73871d0a08f0"></script>
+
 
   </body>
 
